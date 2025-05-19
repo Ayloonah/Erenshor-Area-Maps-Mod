@@ -75,6 +75,7 @@
   <ItemGroup>
     <Content Include="Assets\AzynthiClear.png" />
     <Content Include="Assets\Azynthi.png" />
+    <Content Include="Assets\Tutorial.png" />
     <Content Include="Assets\SaltedStrand.png" />
     <Content Include="Assets\Braxonian.png" />
     <Content Include="Assets\Duskenlight.png" />

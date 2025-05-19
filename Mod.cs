@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Erenshor_Area_Maps_Mod
 {
-
     [BepInPlugin("com.ayloonah.erenshor_area_maps_mod", "Erenshor Area Maps Mod", "1.0.0")]
     public class Mod : BaseUnityPlugin
     {
