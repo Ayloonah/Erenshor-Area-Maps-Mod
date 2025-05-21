@@ -10,4 +10,4 @@ Adds the zone maps from [the Erenshor Wiki](https://erenshor.wiki.gg/wiki/Zone_M
 - Requires [BepInEx](https://github.com/BepInEx/BepInEx)
 - Download the zip file of the [Latest Release](https://github.com/Ayloonah/Erenshor-Chat-History-Mod/releases/)
 - Place the whole `Ayloonah.Erenshor-Area-Maps-Mod` folder inside your `BepInEx/Plugins` directory
--- For example, `C:\Program Files (x86)\Steam\steamapps\common\Erenshor\BepInEx\Plugins\Ayloonah.Erenshor-Area-Maps-Mod`
+  - For example, `C:\Program Files (x86)\Steam\steamapps\common\Erenshor\BepInEx\Plugins\Ayloonah.Erenshor-Area-Maps-Mod`
