@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using System.IO;
 using BepInEx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,28 +52,41 @@ namespace Erenshor_Area_Maps_Mod
         "VitheosEnd"        //Vitheo's Rest
     };
         private string sceneName;
-        private U
+        private string sceneTemp;
+        private GameObject mapCanvas;
 
-        private void Update()
-        {
+        private void Update() {
             // Finding the instance of the map object:
-
-            
-            // Checking the scene we're in:
-            sceneName = SceneManager.GetActiveScene().name;
-            if (sceneName == "Menu" || sceneName == "LoadScene")
-            {
-                return;
+            if (mapCanvas == null) {
+                mapCanvas = GameObject.Find("Map");
             }
 
-            // Cross checking with the game scenes list to see what we're doing with it and catch errors:
-            if (!mapAreas.Contains(sceneName))
-            {
+            // Grabbing the scene:
+            sceneTemp = SceneManager.GetActiveScene().name;
+
+            // Checking to see if the previous scene name matches the new one:
+            if (sceneTemp == sceneName) {
                 return;
             }
-            else if (mapAreas.IndexOf(sceneName) >= 22) {
+            else
             {
+                // Updating sceneName:
+                sceneName = sceneTemp;
+                // Discarding the main menu and loading scenes:
+                if (sceneName == "Menu" || sceneName == "LoadScene") { 
+                    return;
+                }
 
+                // Some map texture variables:
+                var mapImage = mapCanvas.GetComponent<Image>();
+                var texture = new Texture2D(1, 1, TextureFormat.RGBA32, false);
+
+                // Cross checking with the game scenes list to see which map image will be displayed:
+                if (!mapAreas.Contains(sceneName) || (mapAreas.IndexOf(sceneName) >= 22)) {
+                    texture.LoadImage(File.ReadAllBytes($"{Paths.PluginPath}/Ayloonah.Erenshor-Area-Maps-Mod/Assets/MapRoutes.png"));
+                } else {
+                    texture.LoadImage(File.ReadAllBytes($"{Paths.PluginPath}/Ayloonah.Erenshor-Area-Maps-Mod/Assets/" + sceneName + ".png"));
+                }
             }
         }
     }
