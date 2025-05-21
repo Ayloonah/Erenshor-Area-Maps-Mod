@@ -1,0 +1,9 @@
+{
+  "name": "Area_Maps",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/Ayloonah/Erenshor-Area-Maps-Mod",
+  "description": "Adds the zone maps from the Erenshor Wiki to the game.",
+  "dependencies": [
+      "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
