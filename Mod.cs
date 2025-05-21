@@ -1,14 +1,13 @@
 ﻿using BepInEx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Erenshor_Area_Maps_Mod
 {
     [BepInPlugin("com.ayloonah.erenshor_area_maps_mod", "Erenshor Area Maps Mod", "1.0.0")]
     public class Mod : BaseUnityPlugin
     {
-        // This method is called when the mod is loaded
-        private void Awake()
-        {
+        private void Awake() {
             Logger.LogInfo("Erenshor Area Maps Mod loaded!");
 
             // Referring to the actual mod content
@@ -17,11 +16,9 @@ namespace Erenshor_Area_Maps_Mod
             DontDestroyOnLoad(go);
         }
 
-        // This method is called when the mod is unloaded
         public void OnDestroy()
         {
             Logger.LogInfo("Erenshor Area Maps Mod unloaded!");
         }
-
     }
 }

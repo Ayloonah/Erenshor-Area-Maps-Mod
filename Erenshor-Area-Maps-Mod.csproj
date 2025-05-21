@@ -60,6 +60,10 @@
     <Reference Include="UnityEngine.ImageConversionModule">
       <HintPath>T:\SteamLibrary\steamapps\common\Erenshor\Erenshor_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>T:\SteamLibrary\steamapps\common\Erenshor\Erenshor_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>T:\SteamLibrary\steamapps\common\Erenshor\Erenshor_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -87,7 +91,6 @@
     <Content Include="Assets\MapRoutes.png" />
     <Content Include="Assets\Azure.png" />
     <Content Include="Assets\Ripper.png" />
-    <Content Include="Assets\Rottenfoot.png" />
     <Content Include="Assets\ShiveringStep.png" />
     <Content Include="Assets\ShiveringTomb.png" />
     <Content Include="Assets\Silkengrass.png" />
